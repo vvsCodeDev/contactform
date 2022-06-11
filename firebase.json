@@ -3,7 +3,8 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "y",
+    "site": "newcontactform-ece4b",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

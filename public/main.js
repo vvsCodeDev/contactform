@@ -77,14 +77,14 @@
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyDVbesjq99szaO8vC8cIVLs0mMXfp_uuj0",
-  authDomain: "contactform-14d9f.firebaseapp.com",
-  projectId: "contactform-14d9f",
-  databaseURL: "https://contactform-14d9f-default-rtdb.firebaseio.com/",
-  storageBucket: "contactform-14d9f.appspot.com",
-  messagingSenderId: "662214746019",
-  appId: "1:662214746019:web:08a54bc7e279f7f2df0416",
-  measurementId: "G-RGLRDHYM44"
+  apiKey: "AIzaSyBRt0y72nHzAmpQeK0EAZjW7zNBGPHq1ow",
+  authDomain: "newcontactform-ece4b.firebaseapp.com",
+  databaseURL: "https://newcontactform-ece4b-default-rtdb.firebaseio.com",
+  projectId: "newcontactform-ece4b",
+  storageBucket: "newcontactform-ece4b.appspot.com",
+  messagingSenderId: "644098995528",
+  appId: "1:644098995528:web:a789fd271ca536caa66f7d",
+  measurementId: "G-B9JP0M3RXQ"
 };
 firebase.initializeApp(config);
 
