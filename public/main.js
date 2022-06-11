@@ -11,7 +11,7 @@
 // };
 
 // Initialize Firebase
-import CONFIG from "./env.js";
+import { CONFIG } from "./env.js";
 
 firebase.initializeApp(CONFIG);
 
