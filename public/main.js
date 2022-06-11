@@ -11,9 +11,9 @@
 // };
 
 // Initialize Firebase
-import config from env.js;
+import CONFIG from env.js;
 
-firebase.initializeApp(config);
+firebase.initializeApp(CONFIG);
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
