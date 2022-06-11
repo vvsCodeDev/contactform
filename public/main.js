@@ -11,16 +11,7 @@
 // };
 
 // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyBRt0y72nHzAmpQeK0EAZjW7zNBGPHq1ow",
-  authDomain: "newcontactform-ece4b.firebaseapp.com",
-  databaseURL: "https://newcontactform-ece4b-default-rtdb.firebaseio.com",
-  projectId: "newcontactform-ece4b",
-  storageBucket: "newcontactform-ece4b.appspot.com",
-  messagingSenderId: "644098995528",
-  appId: "1:644098995528:web:a789fd271ca536caa66f7d",
-  measurementId: "G-B9JP0M3RXQ"
-};
+import config from env.js;
 
 firebase.initializeApp(config);
 
