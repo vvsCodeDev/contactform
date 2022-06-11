@@ -64,8 +64,8 @@ node_modules/
 
 # dotenv environment variables file
 .env
-env.js
-public/env.js
+env2.js
+public/env2.js
 
 ignoretest1.js
 ignoretest2.js
