@@ -66,3 +66,6 @@ node_modules/
 .env
 env.js
 public/env.js
+
+ignoretest1.js
+ignoretest2.js
