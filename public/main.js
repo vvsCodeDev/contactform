@@ -1,4 +1,5 @@
-require('dotenv').config()
+require('dotenv').config();
+console.log(process.env);
 
 const CONFIG = {
   apiKey: process.env.API_KEY,
