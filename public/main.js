@@ -3,7 +3,7 @@
 const CONFIG = {
   apiKey: "AIzaSyBRt0y72nHzAmpQeK0EAZjW7zNBGPHq1ow",
   authDomain: "newcontactform-ece4b.firebaseapp.com",
-  databaseURL: "https://newcontactform-ece4b-default-rtdb.firebaseio.com",
+  databaseURL: "https://newcontactform-ece4b-default-rtdb.firebaseio.com/",
   projectId: "newcontactform-ece4b",
   storageBucket: "newcontactform-ece4b.appspot.com",
   messagingSenderId: "644098995528",
