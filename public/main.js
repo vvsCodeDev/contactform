@@ -23,27 +23,29 @@ document.getElementById('contactForm').addEventListener('submit', submitForm);
 // Submit form
 function submitForm(e){
   e.preventDefault();
+  console.log("testing console log");
 
-  //Get value
-  var name = getInputVal('name');
-  var company = getInputVal('company');
-  var email = getInputVal('email');
-  var phone = getInputVal('phone');
-  var message = getInputVal('message');
 
-  // Save message
-  saveMessage(name, company, email, phone, message);
+  // //Get value
+  // var name = getInputVal('name');
+  // var company = getInputVal('company');
+  // var email = getInputVal('email');
+  // var phone = getInputVal('phone');
+  // var message = getInputVal('message');
 
-  // Show alert
-  document.querySelector('.alert').style.display = 'block';
+  // // Save message
+  // saveMessage(name, company, email, phone, message);
 
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
+  // // Show alert
+  // document.querySelector('.alert').style.display = 'block';
 
-  // Clear form
-  document.getElementById('contactForm').reset();
+  // // Hide alert after 3 seconds
+  // setTimeout(function(){
+  //   document.querySelector('.alert').style.display = 'none';
+  // },3000);
+
+  // // Clear form
+  // document.getElementById('contactForm').reset();
 }
 
 // Function to get form value
