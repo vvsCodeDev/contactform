@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 const firefbaseConfig = {
     apiKey: "AIzaSyBRt0y72nHzAmpQeK0EAZjW7zNBGPHq1ow",
@@ -18,22 +18,30 @@ const firefbaseConfig = {
   // Initialize Cloud Firestore and get a reference to the service
   const db = getFirestore(app);
   
-  // Reference messages collection
-  var messagesRef = db.ref('messages');
-  
-  // Listen for form submit
-  document.getElementById('contactForm').addEventListener('submit', submitForm);
+  try {
+    const docRef = await addDoc(collection(db, "messages"), {
+      name: name,
+      company: company,
+      email: email,
+      phone: phone,
+      message: message
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+
   
   // Submit form
   function submitForm(e){
     e.preventDefault();
   
     //Get value
-    var name = getInputVal('name');
-    var company = getInputVal('company');
-    var email = getInputVal('email');
-    var phone = getInputVal('phone');
-    var message = getInputVal('message');
+    let name = getInputVal('name');
+    let company = getInputVal('company');
+    let email = getInputVal('email');
+    let phone = getInputVal('phone');
+    let message = getInputVal('message');
   
     // Save message
     saveMessage(name, company, email, phone, message);
@@ -53,18 +61,5 @@ const firefbaseConfig = {
   // Function to get form value
   function getInputVal(id){
     return document.getElementById(id).value;
-  }
-  
-  // Save message to firebase
-  function saveMessage(name, company, email, phone, message){
-    var newMessageRef = messagesRef.push();
-    
-    newMessageRef.set({
-      name: name,
-      company: company,
-      email: email,
-      phone: phone,
-      message: message
-    });
   }
   
