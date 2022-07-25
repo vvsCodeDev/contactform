@@ -16,7 +16,9 @@ const firefbaseConfig = {
   const app = initializeApp(firefbaseConfig);
 
   // Initialize Cloud Firestore and get a reference to the service
-  const db = getFirestore(app);
+  //const db = getFirestore(app);
+  const db = firebase.firestore();
+
   
 //   try {
 //     const docRef = await addDoc(collection(db, "messages"), {
