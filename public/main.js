@@ -22,32 +22,32 @@ const firefbaseConfig = {
   const db = firebase.firestore();
 
   
-//   try {
-//     const docRef = await addDoc(collection(db, "messages"), {
-//       name: name,
-//       company: company,
-//       email: email,
-//       phone: phone,
-//       message: message
-//     });
-//     console.log("Document written with ID: ", docRef.id);
-//   } catch (e) {
-//     console.error("Error adding document: ", e);
-//   }
-
-db.collection("messages").add({
+  try {
+    const docRef = await addDoc(collection(db, "messages"), {
       name: name,
       company: company,
       email: email,
       phone: phone,
       message: message
-})
-.then((docRef) => {
+    });
     console.log("Document written with ID: ", docRef.id);
-})
-.catch((error) => {
-    console.error("Error adding document: ", error);
-});
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+
+// db.collection("messages").add({
+//       name: name,
+//       company: company,
+//       email: email,
+//       phone: phone,
+//       message: message
+// })
+// .then((docRef) => {
+//     console.log("Document written with ID: ", docRef.id);
+// })
+// .catch((error) => {
+//     console.error("Error adding document: ", error);
+// });
 
   
   // Submit form
